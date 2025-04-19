@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.ecomm.service.impl.ItemServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.54 s <<< FAILURE! - in com.ecomm.service.impl.ItemServiceImplTest
+deductStock  Time elapsed: 0.019 s  <<< ERROR!
+com.ecomm.common.exception.BizIllegalException: 更新库存异常，可能是库存不足!
+	at com.ecomm.service.impl.ItemServiceImplTest.deductStock(ItemServiceImplTest.java:34)
+Caused by: org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.hmall.mapper.ItemMapper.updateStock
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.hmall.mapper.ItemMapper.updateStock
+	at com.ecomm.service.impl.ItemServiceImplTest.deductStock(ItemServiceImplTest.java:34)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error updating database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.hmall.mapper.ItemMapper.updateStock
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.hmall.mapper.ItemMapper.updateStock
+	at com.ecomm.service.impl.ItemServiceImplTest.deductStock(ItemServiceImplTest.java:34)
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.hmall.mapper.ItemMapper.updateStock
+	at com.ecomm.service.impl.ItemServiceImplTest.deductStock(ItemServiceImplTest.java:34)
+

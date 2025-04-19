@@ -1,0 +1,9 @@
+com/ecomm/item/domain/query/ItemPageQuery.class
+com/ecomm/item/service/impl/ItemServiceImpl.class
+com/ecomm/item/ItemApplication.class
+com/ecomm/item/controller/ItemController.class
+com/ecomm/item/domain/dto/OrderDetailDTO.class
+com/ecomm/item/service/IItemService.class
+com/ecomm/item/domain/po/Item.class
+com/ecomm/item/mapper/ItemMapper.class
+com/ecomm/item/domain/dto/ItemDTO.class

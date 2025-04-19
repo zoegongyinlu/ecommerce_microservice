@@ -1,0 +1,9 @@
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/domain/query/ItemPageQuery.java
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/controller/ItemController.java
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/service/IItemService.java
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/domain/dto/OrderDetailDTO.java
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/domain/po/Item.java
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/service/impl/ItemServiceImpl.java
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/ItemApplication.java
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/mapper/ItemMapper.java
+/Users/zoegong/Projects/ecommerce_microservice/hmall/item_service/src/main/java/com/ecomm/item/domain/dto/ItemDTO.java
