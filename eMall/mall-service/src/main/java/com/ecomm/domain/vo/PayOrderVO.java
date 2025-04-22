@@ -8,42 +8,57 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 支付订单
+ * Payment Order
  * </p>
  */
 @Data
-@ApiModel(description = "支付单vo实体")
+@ApiModel(description = "Payment Order VO Entity")
 public class PayOrderVO {
-    @ApiModelProperty("id")
+    @ApiModelProperty("ID")
     private Long id;
-    @ApiModelProperty("业务订单号")
+
+    @ApiModelProperty("Business order number")
     private Long bizOrderNo;
-    @ApiModelProperty("支付单号")
+
+    @ApiModelProperty("Payment order number")
     private Long payOrderNo;
-    @ApiModelProperty("支付用户id")
+
+    @ApiModelProperty("Paying user ID")
     private Long bizUserId;
-    @ApiModelProperty("支付渠道编码")
+
+    @ApiModelProperty("Payment channel code")
     private String payChannelCode;
-    @ApiModelProperty("支付金额，单位分")
+
+    @ApiModelProperty("Payment amount, in cents")
     private Integer amount;
-    @ApiModelProperty("付类型，1：h5,2:小程序，3：公众号，4：扫码，5：余额支付")
+
+    @ApiModelProperty("Payment type: 1 - H5, 2 - Mini Program, 3 - Official Account, 4 - QR Code Scan, 5 - Balance Payment")
     private Integer payType;
-    @ApiModelProperty("付状态，0：待提交，1:待支付，2：支付超时或取消，3：支付成功")
+
+    @ApiModelProperty("Payment status: 0 - Pending Submission, 1 - Pending Payment, 2 - Payment Timeout or Canceled, 3 - Payment Successful")
     private Integer status;
-    @ApiModelProperty("拓展字段，用于传递不同渠道单独处理的字段")
+
+    @ApiModelProperty("Extended fields, used to pass fields for special handling by different channels")
     private String expandJson;
-    @ApiModelProperty("第三方返回业务码")
+
+    @ApiModelProperty("Third-party return business code")
     private String resultCode;
-    @ApiModelProperty("第三方返回提示信息")
+
+    @ApiModelProperty("Third-party return message")
     private String resultMsg;
-    @ApiModelProperty("支付成功时间")
+
+    @ApiModelProperty("Payment success time")
     private LocalDateTime paySuccessTime;
-    @ApiModelProperty("支付超时时间")
+
+    @ApiModelProperty("Payment timeout time")
     private LocalDateTime payOverTime;
-    @ApiModelProperty("支付二维码链接")
+
+    @ApiModelProperty("QR code URL for payment")
     private String qrCodeUrl;
-    @ApiModelProperty("创建时间")
+
+    @ApiModelProperty("Creation time")
     private LocalDateTime createTime;
-    @ApiModelProperty("更新时间")
+
+    @ApiModelProperty("Update time")
     private LocalDateTime updateTime;
 }

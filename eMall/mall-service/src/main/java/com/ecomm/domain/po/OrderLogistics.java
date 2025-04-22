@@ -20,59 +20,42 @@ public class OrderLogistics implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 订单id，与订单表一对一
+     * 订单id，one-to-one
      */
     @TableId(value = "order_id", type = IdType.INPUT)
     private Long orderId;
 
     /**
-     * 物流单号
+     * logistic number
      */
     private String logisticsNumber;
 
     /**
-     * 物流公司名称
+     * logistic company
      */
     private String logisticsCompany;
 
-    /**
-     * 收件人
-     */
+
     private String contact;
 
-    /**
-     * 收件人手机号码
-     */
     private String mobile;
 
-    /**
-     * 省
-     */
+
     private String province;
 
-    /**
-     * 市
-     */
+
     private String city;
 
-    /**
-     * 区
-     */
+
     private String town;
 
-    /**
-     * 街道
-     */
+
     private String street;
 
-    /**
-     * 创建时间
-     */
+
     private LocalDateTime createTime;
 
-    /**
-     * 更新时间
-     */
+
     private LocalDateTime updateTime;
 
 

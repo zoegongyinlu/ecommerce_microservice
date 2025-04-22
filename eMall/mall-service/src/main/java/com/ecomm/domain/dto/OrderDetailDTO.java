@@ -5,12 +5,12 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-@ApiModel(description = "订单明细条目")
+@ApiModel(description = "order detail dto")
 @Data
 @Accessors(chain = true)
 public class OrderDetailDTO {
-    @ApiModelProperty("商品id")
+    @ApiModelProperty("product id")
     private Long itemId;
-    @ApiModelProperty("商品购买数量")
+    @ApiModelProperty("quantity")
     private Integer num;
 }
