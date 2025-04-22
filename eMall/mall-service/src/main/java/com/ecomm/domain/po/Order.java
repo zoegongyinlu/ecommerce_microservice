@@ -19,15 +19,9 @@ public class Order implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 订单id
-     */
     @TableId(value = "id", type = IdType.ASSIGN_ID)
     private Long id;
 
-    /**
-     * 总金额，单位为分
-     */
     private Integer totalFee;
 
     /**
@@ -70,14 +64,10 @@ public class Order implements Serializable {
      */
     private LocalDateTime closeTime;
 
-    /**
-     * 评价时间
-     */
+
     private LocalDateTime commentTime;
 
-    /**
-     * 更新时间
-     */
+
     private LocalDateTime updateTime;
 
 

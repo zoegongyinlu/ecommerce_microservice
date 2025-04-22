@@ -7,28 +7,38 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-@ApiModel(description = "订单页面VO")
+@ApiModel(description = "Order Page VO")
 public class OrderVO {
-    @ApiModelProperty("订单id")
+    @ApiModelProperty("Order ID")
     private Long id;
-    @ApiModelProperty("总金额，单位为分")
+
+    @ApiModelProperty("Total amount, in cents")
     private Integer totalFee;
-    @ApiModelProperty("支付类型，1、支付宝，2、微信，3、扣减余额")
+
+    @ApiModelProperty("Payment type: 1 - Alipay, 2 - WeChat, 3 - Deduct balance")
     private Integer paymentType;
-    @ApiModelProperty("用户id")
+
+    @ApiModelProperty("User ID")
     private Long userId;
-    @ApiModelProperty("订单的状态，1、未付款 2、已付款,未发货 3、已发货,未确认 4、确认收货，交易成功 5、交易取消，订单关闭 6、交易结束，已评价")
+
+    @ApiModelProperty("Order status: 1 - Unpaid, 2 - Paid (not shipped), 3 - Shipped (not confirmed), 4 - Confirmed receipt (transaction successful), 5 - Transaction canceled (order closed), 6 - Transaction completed (reviewed)")
     private Integer status;
-    @ApiModelProperty("创建时间")
+
+    @ApiModelProperty("Creation time")
     private LocalDateTime createTime;
-    @ApiModelProperty("支付时间")
+
+    @ApiModelProperty("Payment time")
     private LocalDateTime payTime;
-    @ApiModelProperty("发货时间")
+
+    @ApiModelProperty("Shipping time")
     private LocalDateTime consignTime;
-    @ApiModelProperty("交易完成时间")
+
+    @ApiModelProperty("Transaction completion time")
     private LocalDateTime endTime;
-    @ApiModelProperty("交易关闭时间")
+
+    @ApiModelProperty("Transaction close time")
     private LocalDateTime closeTime;
-    @ApiModelProperty("评价时间")
+
+    @ApiModelProperty("Review time")
     private LocalDateTime commentTime;
 }

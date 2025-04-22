@@ -1,0 +1,13 @@
+00:18:40:229  WARN 21393 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+00:18:40:234  WARN 21393 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+00:18:40:229  WARN 21393 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+00:18:40:236  WARN 21393 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+00:18:40:276  INFO 21393 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+00:18:40:283  INFO 21393 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+00:18:40:596  INFO 21393 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+00:18:40:596  INFO 21393 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@4d61120d[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+00:18:40:596  INFO 21393 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1745100936463_192.168.65.1_54064
+00:18:40:598  INFO 21393 --- [nacos-grpc-client-executor-3944] c.a.n.c.remote.client.grpc.GrpcClient    : [1745100936463_192.168.65.1_54064]Ignore complete event,isRunning:false,isAbandon=false
+00:18:40:601  INFO 21393 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@43da575f[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 3945]
+00:18:40:607  INFO 21393 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+00:18:40:620  INFO 21393 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
