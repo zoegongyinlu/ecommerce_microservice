@@ -121,3 +121,24 @@
 17:13:59:383 DEBUG 48034 --- [http-nio-8085-exec-5] c.e.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
 17:13:59:386 DEBUG 48034 --- [http-nio-8085-exec-5] c.e.user.mapper.UserMapper.selectOne     : ==> Parameters: jack(String)
 17:13:59:394 DEBUG 48034 --- [http-nio-8085-exec-5] c.e.user.mapper.UserMapper.selectOne     : <==      Total: 1
+18:18:46:548 DEBUG 48034 --- [http-nio-8085-exec-7] c.e.user.mapper.UserMapper.selectOne     : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+18:18:46:550 DEBUG 48034 --- [http-nio-8085-exec-7] c.e.user.mapper.UserMapper.selectOne     : ==> Parameters: jack(String)
+18:18:46:554 DEBUG 48034 --- [http-nio-8085-exec-7] c.e.user.mapper.UserMapper.selectOne     : <==      Total: 1
+20:28:21:254  INFO 48034 --- [nacos-grpc-client-executor-30259] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Receive server push request, request = ClientDetectionRequest, requestId = 2489
+20:28:21:256  INFO 48034 --- [nacos-grpc-client-executor-30259] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Ack server push request, request = ClientDetectionRequest, requestId = 2489
+20:28:29:060  WARN 48034 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m14s997ms).
+20:45:30:426  INFO 48034 --- [nacos-grpc-client-executor-30271] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Receive server push request, request = ClientDetectionRequest, requestId = 2497
+20:45:30:427  INFO 48034 --- [nacos-grpc-client-executor-30271] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Ack server push request, request = ClientDetectionRequest, requestId = 2497
+20:45:38:122  WARN 48034 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m39s61ms).
+21:02:13:940  WARN 48034 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m35s818ms).
+21:02:36:330  INFO 48034 --- [nacos-grpc-client-executor-30283] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Receive server push request, request = ClientDetectionRequest, requestId = 2508
+21:02:36:330  INFO 48034 --- [nacos-grpc-client-executor-30283] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Ack server push request, request = ClientDetectionRequest, requestId = 2508
+21:20:40:005  INFO 48034 --- [nacos-grpc-client-executor-30316] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Receive server push request, request = ClientDetectionRequest, requestId = 2521
+21:20:40:008  INFO 48034 --- [nacos-grpc-client-executor-30316] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Ack server push request, request = ClientDetectionRequest, requestId = 2521
+21:20:47:393  WARN 48034 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m3s445ms).
+21:38:35:165  WARN 48034 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m47s772ms).
+21:38:57:914  INFO 48034 --- [nacos-grpc-client-executor-30329] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Receive server push request, request = ClientDetectionRequest, requestId = 2529
+21:38:57:915  INFO 48034 --- [nacos-grpc-client-executor-30329] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Ack server push request, request = ClientDetectionRequest, requestId = 2529
+21:55:58:129  INFO 48034 --- [nacos-grpc-client-executor-30349] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Receive server push request, request = ClientDetectionRequest, requestId = 2537
+21:55:58:130  INFO 48034 --- [nacos-grpc-client-executor-30349] com.alibaba.nacos.common.remote.client   : [9e11f265-630b-41e4-9231-9d3849256adb] Ack server push request, request = ClientDetectionRequest, requestId = 2537
+21:56:05:235  WARN 48034 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m55ms).

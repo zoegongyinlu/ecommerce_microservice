@@ -1,6 +1,7 @@
 package com.ecomm.api.client;
 
 
+import com.ecomm.api.client.fallback.ItemClientFallbackFactory;
 import com.ecomm.api.dto.ItemDTO;
 import com.ecomm.api.dto.OrderDetailDTO;
 import java.util.Collection;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient("item-service")
+@FeignClient(value = "item-service", fallbackFactory = ItemClientFallbackFactory.class)
 
 public interface ItemClient {
   @GetMapping("/items")

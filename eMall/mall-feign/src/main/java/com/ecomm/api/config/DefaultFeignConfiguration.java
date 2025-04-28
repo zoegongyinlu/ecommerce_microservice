@@ -1,5 +1,6 @@
 package com.ecomm.api.config;
 
+import com.ecomm.api.client.fallback.ItemClientFallbackFactory;
 import com.ecomm.common.utils.UserThreadLocal;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
@@ -24,5 +25,10 @@ public class DefaultFeignConfiguration {
 
       }
     };
+  }
+
+  @Bean
+  public ItemClientFallbackFactory itemClientFallbackFactory(){
+    return new ItemClientFallbackFactory();
   }
 }
