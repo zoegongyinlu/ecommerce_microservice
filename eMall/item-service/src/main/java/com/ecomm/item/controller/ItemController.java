@@ -1,5 +1,6 @@
 package com.ecomm.item.controller;
 
+import cn.hutool.core.thread.ThreadUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ecomm.api.dto.ItemDTO;
 import com.ecomm.api.dto.OrderDetailDTO;
@@ -36,6 +37,7 @@ public class ItemController {
     @ApiOperation("Query items by ID list")
     @GetMapping
     public List<ItemDTO> queryItemByIds(@RequestParam("ids") List<Long> ids) {
+
         return itemService.queryItemByIds(ids);
     }
 
