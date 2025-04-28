@@ -6,7 +6,7 @@ import com.ecomm.api.client.ItemClient;
 import com.ecomm.api.dto.ItemDTO;
 import com.ecomm.api.dto.OrderDetailDTO;
 import com.ecomm.common.exception.BadRequestException;
-import com.ecomm.common.utils.UserContext;
+import com.ecomm.common.utils.UserThreadLocal;
 import com.ecomm.order.domain.dto.OrderFormDTO;
 import com.ecomm.order.domain.po.Order;
 import com.ecomm.order.domain.po.OrderDetail;
@@ -56,7 +56,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setTotalFee(total);
         // 1.5.其它属性
         order.setPaymentType(orderFormDTO.getPaymentType());
-        order.setUserId(UserContext.getUser());
+        order.setUserId(UserThreadLocal.getUser());
         order.setStatus(1);
         // 1.6.将Order写入数据库order表中
         save(order);

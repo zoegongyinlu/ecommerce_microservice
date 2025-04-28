@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.List;
 
 @Data
-@ConfigurationProperties(prefix = "ecomm.auth")
+@ConfigurationProperties(prefix = "mall.auth")
 public class AuthProperties {
     private List<String> includePaths;
     private List<String> excludePaths;

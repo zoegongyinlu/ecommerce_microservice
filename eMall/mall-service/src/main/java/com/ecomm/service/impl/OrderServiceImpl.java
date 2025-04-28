@@ -2,7 +2,7 @@ package com.ecomm.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ecomm.common.exception.BadRequestException;
-import com.ecomm.common.utils.UserContext;
+import com.ecomm.common.utils.UserThreadLocal;
 import com.ecomm.domain.dto.ItemDTO;
 import com.ecomm.domain.dto.OrderDetailDTO;
 import com.ecomm.domain.dto.OrderFormDTO;
@@ -57,7 +57,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setTotalFee(total);
         // 1.5.其它属性
         order.setPaymentType(orderFormDTO.getPaymentType());
-        order.setUserId(UserContext.getUser());
+        order.setUserId(UserThreadLocal.getUser());
         order.setStatus(1);
         // 1.6.将Order写入数据库order表中
         save(order);

@@ -9,12 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mall-service" />
         <module name="cart-service" />
+        <module name="mall-feign" />
         <module name="payment-service" />
         <module name="item-service" />
         <module name="user-service" />
         <module name="order-service" />
         <module name="mall-common" />
-        <module name="mall-api" />
+        <module name="mall-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,8 +26,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cart-service" options="-parameters" />
       <module name="item-service" options="-parameters" />
-      <module name="mall-api" options="-parameters" />
       <module name="mall-common" options="-parameters" />
+      <module name="mall-feign" options="-parameters" />
+      <module name="mall-gateway" options="-parameters" />
       <module name="mall-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="payment-service" options="-parameters" />

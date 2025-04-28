@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ecomm.common.exception.BadRequestException;
 import com.ecomm.common.exception.BizIllegalException;
 import com.ecomm.common.exception.ForbiddenException;
-import com.ecomm.common.utils.UserContext;
+import com.ecomm.common.utils.UserThreadLocal;
 import com.ecomm.user.config.JwtProperties;
 import com.ecomm.user.domain.dto.LoginFormDTO;
 import com.ecomm.user.domain.po.User;
@@ -63,7 +63,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     public void deductMoney(String pw, Integer totalFee) {
         log.info("start to deductMoney");
         // 1.校验密码
-        User user = getById(UserContext.getUser());
+        User user = getById(UserThreadLocal.getUser());
         if(user == null || !passwordEncoder.matches(pw, user.getPassword())){
             // 密码错误
             throw new BizIllegalException("password error");
@@ -71,7 +71,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         // 2.尝试扣款
         try {
-            baseMapper.updateMoney(UserContext.getUser(), totalFee);
+            baseMapper.updateMoney(UserThreadLocal.getUser(), totalFee);
         } catch (Exception e) {
             throw new RuntimeException("balance insufficient！", e);
         }

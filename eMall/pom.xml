@@ -13,10 +13,11 @@
         <module>mall-service</module>
         <module>item-service</module>
        <module>cart-service</module>
-      <module>mall-api</module>
+      <module>mall-feign</module>
       <module>user-service</module>
       <module>order-service</module>
         <module>payment-service</module>
+      <module>mall-gateway</module>
     </modules>
 
     <parent>

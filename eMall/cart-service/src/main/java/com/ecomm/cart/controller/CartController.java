@@ -41,7 +41,8 @@ public class CartController {
 
     @ApiOperation("Get shopping cart list")
     @GetMapping
-    public List<CartVO> queryMyCarts(){
+    public List<CartVO> queryMyCarts(@RequestHeader(value = "user-header", required = false) String userId){
+
         return cartService.queryMyCarts();
     }
 

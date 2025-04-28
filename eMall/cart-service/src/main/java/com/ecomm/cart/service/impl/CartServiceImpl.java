@@ -9,7 +9,7 @@ import com.ecomm.api.dto.ItemDTO;
 import com.ecomm.common.exception.BizIllegalException;
 import com.ecomm.common.utils.BeanUtils;
 import com.ecomm.common.utils.CollUtils;
-import com.ecomm.common.utils.UserContext;
+import com.ecomm.common.utils.UserThreadLocal;
 
 import com.ecomm.cart.domain.dto.CartFormDTO;
 import com.ecomm.cart.domain.po.Cart;
@@ -33,12 +33,12 @@ import org.springframework.stereotype.Service;
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 
     private final ItemClient itemClient;
+    private final int MAX_ITEM_NUM = 20;
 
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
         // 1.get userid
-        Long userId = UserContext.getUser();
-
+        Long userId = UserThreadLocal.getUser();
 
         if(checkItemExists(cartFormDTO.getItemId(), userId)){
             // 2.1.if exist updates the number
@@ -60,7 +60,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Override
     public List<CartVO> queryMyCarts() {
         // 1.查询我的购物车列表
-        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
+//        System.out.println("+++++UserContext ID: " +UserContext.getUser().toString());
+        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserThreadLocal.getUser()).list();
         if (CollUtils.isEmpty(carts)) {
             return CollUtils.emptyList();
         }
@@ -129,7 +130,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         // 1.构建删除条件，userId和itemId
         QueryWrapper<Cart> queryWrapper = new QueryWrapper<Cart>();
         queryWrapper.lambda()
-                .eq(Cart::getUserId, UserContext.getUser())
+                .eq(Cart::getUserId, UserThreadLocal.getUser())
                 .in(Cart::getItemId, itemIds);
         // 2.删除
         remove(queryWrapper);
@@ -137,8 +138,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     private void checkCartsFull(Long userId) {
         int count = lambdaQuery().eq(Cart::getUserId, userId).count();
-        if (count >= 10) {
-            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", 10));
+        if (count >= MAX_ITEM_NUM) {
+            throw new BizIllegalException(StrUtil.format("The cart number cannot be over 20{}", 10));
         }
     }
 
