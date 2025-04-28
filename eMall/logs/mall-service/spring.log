@@ -1,34 +1,85 @@
-00:22:04:088  INFO 20176 --- [main] com.ecomm.EMallApplication               : Starting EMallApplication using Java 11.0.25 on Zoes-MacBook-Pro.local with PID 20176 (/Users/zoegong/Projects/ecommerce_microservice/eMall/mall-service/target/classes started by zoegong in /Users/zoegong/Projects/ecommerce_microservice/eMall)
-00:22:04:092 DEBUG 20176 --- [main] com.ecomm.EMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
-00:22:04:093  INFO 20176 --- [main] com.ecomm.EMallApplication               : The following 1 profile is active: "dev"
-00:22:04:597  INFO 20176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-00:22:04:598  INFO 20176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-00:22:04:610  INFO 20176 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-00:22:04:887  INFO 20176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-00:22:04:892  INFO 20176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-00:22:04:893  INFO 20176 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-00:22:04:958  INFO 20176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-00:22:04:958  INFO 20176 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 831 ms
-00:22:05:818  INFO 20176 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-00:22:05:981  INFO 20176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-00:22:05:982  INFO 20176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-00:22:05:984  INFO 20176 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-00:22:06:001  INFO 20176 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-00:22:06:135  INFO 20176 --- [main] com.ecomm.EMallApplication               : Started EMallApplication in 2.386 seconds (JVM running for 2.79)
-13:45:37:727  INFO 5297 --- [main] com.ecomm.EMallApplication               : Starting EMallApplication using Java 11.0.25 on Zoes-MacBook-Pro.local with PID 5297 (/Users/zoegong/Projects/ecommerce_microservice/eMall/mall-service/target/classes started by zoegong in /Users/zoegong/Projects/ecommerce_microservice/eMall)
-13:45:37:728 DEBUG 5297 --- [main] com.ecomm.EMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
-13:45:37:728  INFO 5297 --- [main] com.ecomm.EMallApplication               : The following 1 profile is active: "dev"
-13:45:38:033  INFO 5297 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-13:45:38:034  INFO 5297 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-13:45:38:045  INFO 5297 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-13:45:38:230  INFO 5297 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-13:45:38:233  INFO 5297 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-13:45:38:233  INFO 5297 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-13:45:38:275  INFO 5297 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-13:45:38:275  INFO 5297 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 534 ms
-13:45:38:837  INFO 5297 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-13:45:38:957  INFO 5297 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-13:45:38:957  INFO 5297 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-13:45:38:958  INFO 5297 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-13:45:38:968  INFO 5297 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-13:45:39:029  INFO 5297 --- [main] com.ecomm.EMallApplication               : Started EMallApplication in 1.439 seconds (JVM running for 1.661)
+21:25:34:644  INFO 2401 --- [main] com.ecomm.EMallApplication               : Starting EMallApplication using Java 11.0.25 on Zoes-MacBook-Pro.local with PID 2401 (/Users/zoegong/Projects/ecommerce_microservice/eMall/mall-service/target/classes started by zoegong in /Users/zoegong/Projects/ecommerce_microservice/eMall)
+21:25:34:647 DEBUG 2401 --- [main] com.ecomm.EMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+21:25:34:647  INFO 2401 --- [main] com.ecomm.EMallApplication               : The following 1 profile is active: "dev"
+21:25:34:952  INFO 2401 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+21:25:34:953  INFO 2401 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+21:25:34:965  INFO 2401 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+21:25:35:176  INFO 2401 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+21:25:35:180  INFO 2401 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+21:25:35:180  INFO 2401 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+21:25:35:225  INFO 2401 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+21:25:35:225  INFO 2401 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 561 ms
+21:25:35:830  INFO 2401 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+21:25:35:998  INFO 2401 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+21:25:35:999  INFO 2401 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+21:25:36:000  INFO 2401 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+21:25:36:013  INFO 2401 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+21:25:36:093  INFO 2401 --- [main] com.ecomm.EMallApplication               : Started EMallApplication in 1.608 seconds (JVM running for 2.136)
+21:25:49:773  INFO 2471 --- [main] com.ecomm.EMallApplication               : Starting EMallApplication using Java 11.0.25 on Zoes-MacBook-Pro.local with PID 2471 (/Users/zoegong/Projects/ecommerce_microservice/eMall/mall-service/target/classes started by zoegong in /Users/zoegong/Projects/ecommerce_microservice/eMall)
+21:25:49:774 DEBUG 2471 --- [main] com.ecomm.EMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+21:25:49:774  INFO 2471 --- [main] com.ecomm.EMallApplication               : The following 1 profile is active: "dev"
+21:25:50:053  INFO 2471 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+21:25:50:053  INFO 2471 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+21:25:50:063  INFO 2471 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+21:25:50:264  INFO 2471 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+21:25:50:267  INFO 2471 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+21:25:50:268  INFO 2471 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+21:25:50:314  INFO 2471 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+21:25:50:314  INFO 2471 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 524 ms
+21:25:50:931  INFO 2471 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+21:25:51:099  INFO 2471 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+21:25:51:099  INFO 2471 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+21:25:51:101  INFO 2471 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+21:25:51:113  INFO 2471 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+21:25:51:194  INFO 2471 --- [main] com.ecomm.EMallApplication               : Started EMallApplication in 1.583 seconds (JVM running for 2.028)
+21:31:46:265  INFO 3882 --- [main] com.ecomm.EMallApplication               : Starting EMallApplication using Java 11.0.25 on Zoes-MacBook-Pro.local with PID 3882 (/Users/zoegong/Projects/ecommerce_microservice/eMall/mall-service/target/classes started by zoegong in /Users/zoegong/Projects/ecommerce_microservice/eMall)
+21:31:46:266 DEBUG 3882 --- [main] com.ecomm.EMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+21:31:46:266  INFO 3882 --- [main] com.ecomm.EMallApplication               : The following 1 profile is active: "dev"
+21:31:46:635  INFO 3882 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+21:31:46:636  INFO 3882 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+21:31:46:649  INFO 3882 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+21:31:46:848  INFO 3882 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+21:31:46:852  INFO 3882 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+21:31:46:852  INFO 3882 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+21:31:46:898  INFO 3882 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+21:31:46:898  INFO 3882 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 599 ms
+21:31:47:496  INFO 3882 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+21:31:47:628  INFO 3882 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+21:31:47:629  INFO 3882 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+21:31:47:630  INFO 3882 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+21:31:47:641  INFO 3882 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+21:31:47:704  INFO 3882 --- [main] com.ecomm.EMallApplication               : Started EMallApplication in 1.64 seconds (JVM running for 1.933)
+21:35:24:889  INFO 4835 --- [main] com.ecomm.EMallApplication               : Starting EMallApplication using Java 11.0.25 on Zoes-MacBook-Pro.local with PID 4835 (/Users/zoegong/Projects/ecommerce_microservice/eMall/mall-service/target/classes started by zoegong in /Users/zoegong/Projects/ecommerce_microservice/eMall)
+21:35:24:890 DEBUG 4835 --- [main] com.ecomm.EMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+21:35:24:890  INFO 4835 --- [main] com.ecomm.EMallApplication               : The following 1 profile is active: "dev"
+21:35:25:172  INFO 4835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+21:35:25:173  INFO 4835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+21:35:25:182  INFO 4835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+21:35:25:346  INFO 4835 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+21:35:25:349  INFO 4835 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+21:35:25:349  INFO 4835 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+21:35:25:391  INFO 4835 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+21:35:25:391  INFO 4835 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 486 ms
+21:35:25:932  INFO 4835 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+21:35:26:066  INFO 4835 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+21:35:26:066  INFO 4835 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+21:35:26:067  INFO 4835 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+21:35:26:077  INFO 4835 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+21:35:26:139  INFO 4835 --- [main] com.ecomm.EMallApplication               : Started EMallApplication in 1.396 seconds (JVM running for 1.622)
+22:57:35:759  INFO 23582 --- [main] com.ecomm.EMallApplication               : Starting EMallApplication using Java 11.0.25 on Zoes-MacBook-Pro.local with PID 23582 (/Users/zoegong/Projects/ecommerce_microservice/eMall/mall-service/target/classes started by zoegong in /Users/zoegong/Projects/ecommerce_microservice/eMall)
+22:57:35:760 DEBUG 23582 --- [main] com.ecomm.EMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+22:57:35:760  INFO 23582 --- [main] com.ecomm.EMallApplication               : The following 1 profile is active: "dev"
+22:57:36:045  INFO 23582 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+22:57:36:046  INFO 23582 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+22:57:36:054  INFO 23582 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+22:57:36:205  INFO 23582 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+22:57:36:207  INFO 23582 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+22:57:36:207  INFO 23582 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+22:57:36:243  INFO 23582 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+22:57:36:244  INFO 23582 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 469 ms
+22:57:36:809  INFO 23582 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+22:57:36:937  INFO 23582 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+22:57:36:937  INFO 23582 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+22:57:36:938  INFO 23582 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+22:57:36:948  INFO 23582 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+22:57:37:009  INFO 23582 --- [main] com.ecomm.EMallApplication               : Started EMallApplication in 1.387 seconds (JVM running for 1.612)

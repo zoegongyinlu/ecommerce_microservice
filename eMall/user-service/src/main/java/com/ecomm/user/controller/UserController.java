@@ -27,6 +27,8 @@ public class UserController {
     @ApiOperation("User Login")
     @PostMapping("login")
     public UserLoginVO login(@RequestBody @Validated LoginFormDTO loginFormDTO){
+        System.out.println("login userid:"+ loginFormDTO.getUsername());
+        System.out.println("login password:"+ loginFormDTO.getPassword());
         return userService.login(loginFormDTO);
     }
 

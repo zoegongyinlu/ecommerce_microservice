@@ -7,7 +7,7 @@ import com.ecomm.api.client.OrderClient;
 import com.ecomm.api.client.UserClient;
 import com.ecomm.common.exception.BizIllegalException;
 import com.ecomm.common.utils.BeanUtils;
-import com.ecomm.common.utils.UserContext;
+import com.ecomm.common.utils.UserThreadLocal;
 import com.ecomm.payment.domain.dto.PayApplyDTO;
 import com.ecomm.payment.domain.dto.PayOrderFormDTO;
 
@@ -114,7 +114,7 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         // 2.初始化数据
         payOrder.setPayOverTime(LocalDateTime.now().plusMinutes(120L));
         payOrder.setStatus(PayStatus.WAIT_BUYER_PAY.getValue());
-        payOrder.setBizUserId(UserContext.getUser());
+        payOrder.setBizUserId(UserThreadLocal.getUser());
         return payOrder;
     }
     public PayOrder queryByBizOrderNo(Long bizOrderNo) {

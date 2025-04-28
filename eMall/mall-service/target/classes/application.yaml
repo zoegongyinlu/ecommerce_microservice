@@ -37,7 +37,7 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.ecomm.controller
-ecomm:
+mall:
   jwt:
     location: classpath:hmall.jks
     alias: hmall
@@ -49,4 +49,4 @@ ecomm:
       - /users/login
       - /items/**
       - /hi
-# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123
+# keytool -genkeypair -alias mall -keyalg RSA -keypass mall123 -keystore mall.jks -storepass mall123

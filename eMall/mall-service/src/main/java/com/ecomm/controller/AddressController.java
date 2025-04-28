@@ -4,7 +4,7 @@ package com.ecomm.controller;
 import com.ecomm.common.exception.BadRequestException;
 import com.ecomm.common.utils.BeanUtils;
 import com.ecomm.common.utils.CollUtils;
-import com.ecomm.common.utils.UserContext;
+import com.ecomm.common.utils.UserThreadLocal;
 import com.ecomm.domain.dto.AddressDTO;
 import com.ecomm.domain.po.Address;
 import com.ecomm.service.IAddressService;
@@ -35,7 +35,7 @@ public class AddressController {
         // 1. Query address by ID
         Address address = addressService.getById(id);
         // 2. Check if the address belongs to the current user
-        Long userId = UserContext.getUser();
+        Long userId = UserThreadLocal.getUser();
         if (!address.getUserId().equals(userId)) {
             throw new BadRequestException("Address does not belong to the currently logged-in user");
         }
@@ -46,7 +46,7 @@ public class AddressController {
     @GetMapping
     public List<AddressDTO> findMyAddresses() {
         // 1. Query address list by user ID
-        List<Address> list = addressService.query().eq("user_id", UserContext.getUser()).list();
+        List<Address> list = addressService.query().eq("user_id", UserThreadLocal.getUser()).list();
         // 2. Check if list is empty
         if (CollUtils.isEmpty(list)) {
             return CollUtils.emptyList();

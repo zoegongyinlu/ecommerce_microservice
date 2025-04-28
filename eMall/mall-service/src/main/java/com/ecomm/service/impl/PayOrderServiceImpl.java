@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ecomm.common.exception.BizIllegalException;
 import com.ecomm.common.utils.BeanUtils;
-import com.ecomm.common.utils.UserContext;
+import com.ecomm.common.utils.UserThreadLocal;
 import com.ecomm.domain.dto.PayApplyDTO;
 import com.ecomm.domain.dto.PayOrderFormDTO;
 import com.ecomm.domain.po.Order;
@@ -115,7 +115,7 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         // 2.初始化数据
         payOrder.setPayOverTime(LocalDateTime.now().plusMinutes(120L));
         payOrder.setStatus(PayStatus.WAIT_BUYER_PAY.getValue());
-        payOrder.setBizUserId(UserContext.getUser());
+        payOrder.setBizUserId(UserThreadLocal.getUser());
         return payOrder;
     }
     public PayOrder queryByBizOrderNo(Long bizOrderNo) {

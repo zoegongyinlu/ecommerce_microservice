@@ -1,6 +1,6 @@
 package com.ecomm.interceptor;
 
-import com.ecomm.common.utils.UserContext;
+import com.ecomm.common.utils.UserThreadLocal;
 import com.ecomm.utils.JwtTool;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -20,7 +20,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 2.校验token
         Long userId = jwtTool.parseToken(token);
         // 3.存入上下文
-        UserContext.setUser(userId);
+        UserThreadLocal.setUser(userId);
         // 4.放行
         return true;
     }
@@ -28,6 +28,6 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         // 清理用户
-        UserContext.removeUser();
+        UserThreadLocal.removeUser();
     }
 }

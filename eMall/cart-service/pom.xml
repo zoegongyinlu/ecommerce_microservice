@@ -27,7 +27,7 @@
 
     <dependency>
       <groupId>com.ecomm</groupId>
-      <artifactId>mall-api</artifactId>
+      <artifactId>mall-feign</artifactId>
       <version>1.0.0</version>
     </dependency>
     <!--web-->
@@ -45,11 +45,26 @@
       <artifactId>spring-security-rsa</artifactId>
       <version>1.0.9.RELEASE</version>
     </dependency>
-
+    <!--nacos-config-->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
+    <!--bootstrap-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bootstrap</artifactId>
+    </dependency>
     <!--db-->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+
+    <!--sentinel-->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
     </dependency>
     <!--mybatis-->
     <dependency>

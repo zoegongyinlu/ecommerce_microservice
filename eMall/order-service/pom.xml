@@ -34,7 +34,7 @@
 
     <dependency>
       <groupId>com.ecomm</groupId>
-      <artifactId>mall-api</artifactId>
+      <artifactId>mall-feign</artifactId>
       <version>1.0.0</version>
     </dependency>
     <!--web-->
