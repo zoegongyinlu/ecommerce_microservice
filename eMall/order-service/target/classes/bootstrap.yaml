@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: order-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - dataId: shared-jdbc.yaml
+          - dataId: shared-log.yaml
+          - dataId: swagger-shared.yaml
+          - dataId: shared-seata.yaml
+          - dataId: shared-rabbitmq.yaml

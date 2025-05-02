@@ -5,10 +5,14 @@ spring:
     active: dev
   cloud:
     nacos:
-      server-addr: localhost:8848
+      server-addr: 127.0.0.1:8848
+      discovery:
+        namespace: ""
+        group: DEFAULT_GROUP
       config:
         file-extension: yaml
         shared-configs:
           - dataId: shared-jdbc.yaml
           - dataId: shared-log.yaml
           - dataId: swagger-shared.yaml
+          - dataId: shared-seata.yaml

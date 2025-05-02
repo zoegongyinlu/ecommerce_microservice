@@ -13,6 +13,7 @@ import com.ecomm.order.domain.po.OrderDetail;
 import com.ecomm.order.mapper.OrderMapper;
 import com.ecomm.order.service.IOrderDetailService;
 import com.ecomm.order.service.IOrderService;
+import io.seata.spring.annotation.GlobalTransactional;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private final CartClient cartClient;
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public Long createOrder(OrderFormDTO orderFormDTO) {
         // 1.订单数据
         Order order = new Order();
