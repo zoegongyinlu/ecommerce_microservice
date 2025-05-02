@@ -22,7 +22,6 @@ public class DefaultFeignConfiguration {
         if (userId != null){
           template.header("user-header", userId.toString());
         }
-
       }
     };
   }

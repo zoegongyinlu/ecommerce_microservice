@@ -19,3 +19,8 @@ spring:
       transport:
         dashboard: localhost:8090
       http-method-specify: true # for same endpoint but different method
+
+cloud:
+  alibaba:
+    seata:
+      tx-service-group: hmall

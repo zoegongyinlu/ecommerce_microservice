@@ -1,48 +1,17 @@
 server:
   port: 8081
+
+
+mall:
+  swagger:
+    title: "eMall item service API"
+    package: com.ecomm.item.controller
+  db:
+    database: hm-item
+
 spring:
-  application:
-    name: item-service
-  profiles:
-    active: dev
-  datasource:
-    url: jdbc:mysql://${mall.db.host}:3306/hm-item?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: ${mall.db.pw}
   cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-mybatis-plus:
-  configuration:
-    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
-  global-config:
-    db-config:
-      update-strategy: not_null
-      id-type: auto
-logging:
-  level:
-    com.ecomm: debug
-  pattern:
-    dateformat: HH:mm:ss:SSS
-  file:
-    path: "logs/${spring.application.name}"
-
-feign:
-  okttp:
-    enabled: true
-knife4j:
-  enable: true
-  openapi:
-    title: product item API
-    description: "product item API"
-
-    url:
-    version: v1.0.0
-    group:
-      default:
-        group-name: default
-        api-rule: package
-        api-rule-resources:
-          - com.ecomm.item.controller
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true # for same endpoint but different method
