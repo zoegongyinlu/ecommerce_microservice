@@ -20,7 +20,7 @@ spring:
         dashboard: localhost:8090
       http-method-specify: true # for same endpoint but different method
   rabbitmq:
-    host: localhost
+    host: 127.0.0.1
     port: 5672
     username: admin
     password: 654321

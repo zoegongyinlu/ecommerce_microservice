@@ -61,7 +61,7 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         try{
             rabbitTemplate.convertAndSend("payment.direct", "payment.success", po.getBizOrderNo());
         }catch (Exception e){
-            e.printStackTrace();
+            log.info("Failed to make payment successfully, order number: {}", po.getBizOrderNo());
         }
     }
 

@@ -7,6 +7,7 @@ import com.ecomm.api.dto.ItemDTO;
 import com.ecomm.api.dto.OrderDetailDTO;
 import com.ecomm.common.exception.BadRequestException;
 import com.ecomm.common.utils.UserThreadLocal;
+import com.ecomm.order.constants.MQConstants;
 import com.ecomm.order.domain.dto.OrderFormDTO;
 import com.ecomm.order.domain.po.Order;
 import com.ecomm.order.domain.po.OrderDetail;
@@ -21,6 +22,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,6 +37,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private final ItemClient itemClient;
     private final IOrderDetailService detailService;
     private final CartClient cartClient;
+    private final RabbitTemplate rabbitTemplate;
 
     @Override
     @GlobalTransactional
@@ -73,8 +79,18 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         try {
             itemClient.deductStock(detailDTOS);
         } catch (Exception e) {
+            log.error("Stock deduction failed: ", e);
             throw new RuntimeException("insufficient stock！");
         }
+
+        rabbitTemplate.convertAndSend(MQConstants.DELAY_EXCHANGE_NAME, MQConstants.DELAY_ROUTING_KEY, order.getId(),
+            new MessagePostProcessor() {
+            @Override
+                public Message postProcessMessage(Message message) throws AmqpException {
+                    message.getMessageProperties().setDelay(10000);
+                    return message;
+                }
+            });
         return order.getId();
     }
 
@@ -85,6 +101,36 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setStatus(2);
         order.setPayTime(LocalDateTime.now());
         updateById(order);
+    }
+
+    @Override
+    public void cancelOrder(Long orderId) {
+        //cancel order
+        Order order = new Order();
+        order.setId(orderId);
+        order.setStatus(5);
+        order.setPayTime(LocalDateTime.now());
+        updateById(order);
+
+        // restore the stock
+        recoverStock(orderId);
+
+
+
+    }
+
+    private void recoverStock(Long orderId) {
+        //1 check the order status
+        List<OrderDetailDTO> detailDTOs = new ArrayList<>();
+        List<OrderDetail> orderDetails = detailService.lambdaQuery().eq(OrderDetail::getOrderId, orderId).list();
+        for (OrderDetail orderDetail : orderDetails) {
+            OrderDetailDTO detailDTO = new OrderDetailDTO();
+            detailDTO.setNum(-orderDetail.getNum());
+            detailDTO.setItemId(orderDetail.getItemId());
+            detailDTOs.add(detailDTO);
+        }
+        itemClient.deductStock(detailDTOs);
+        System.out.println("restore the stock!");
     }
 
     private List<OrderDetail> buildDetails(Long orderId, List<ItemDTO> items, Map<Long, Integer> numMap) {
