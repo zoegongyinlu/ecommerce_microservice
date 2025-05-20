@@ -1,6 +1,7 @@
-package com.ecomm.listener;
+package com.ecomm.order.listener;
 
 
+import com.ecomm.order.domain.po.Order;
 import com.ecomm.order.service.IOrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.Exchange;
@@ -15,9 +16,13 @@ public class PaymentStatusListener {
 
   private final IOrderService orderService;
   @RabbitListener(bindings = @QueueBinding(
-      value = @Queue(value = "orderService.payment.success.queue", durable = "true"), exchange =  @Exchange("payment.direct"), key = "payment.success"
+      value = @Queue(value = "orderService.payment.success.queue", durable = "true"), exchange =  @Exchange(value = "payment.direct", delayed = "true"), key = "payment.success"
   ))
   public void consumePaymentSuccess(Long orderId){
+    //check the orderId and if order status is not paid
+    Order order = orderService.getById(orderId);
+    if (order == null|| order.getStatus() != 1){return;}
+
       orderService.markOrderPaySuccess(orderId);
   }
 }

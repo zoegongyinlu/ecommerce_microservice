@@ -1,9 +1,11 @@
 package com.ecomm.payment.controller;
 
+import com.ecomm.api.dto.PayOrderDTO;
 import com.ecomm.common.exception.BizIllegalException;
 import com.ecomm.common.utils.BeanUtils;
 import com.ecomm.payment.domain.dto.PayApplyDTO;
 import com.ecomm.payment.domain.dto.PayOrderFormDTO;
+import com.ecomm.payment.domain.po.PayOrder;
 import com.ecomm.payment.domain.vo.PayOrderVO;
 import com.ecomm.payment.enums.PayType;
 import com.ecomm.payment.service.IPayOrderService;
@@ -49,6 +51,13 @@ public class PayController {
     public void tryPayOrderByBalance(@PathVariable("id") Long id, @RequestBody PayOrderFormDTO payOrderFormDTO){
         payOrderFormDTO.setId(id);
         payOrderService.tryPayOrderByBalance(payOrderFormDTO);
+    }
+
+    @ApiOperation("check order with id")
+    @GetMapping("/biz/{id}")
+    public PayOrderDTO queryPayOrderByBizOrderNo(@PathVariable("id") Long id){
+        PayOrder payOrder = payOrderService.lambdaQuery().eq(PayOrder::getBizOrderNo, id).one();
+        return BeanUtils.copyBean(payOrder, PayOrderDTO.class);
     }
 }
 

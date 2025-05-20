@@ -22,7 +22,7 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements II
     @Override
     @Transactional
     public void deductStock(List<OrderDetailDTO> items) {
-        String sqlStatement = "com.mall.item.mapper.ItemMapper.updateStock";
+        String sqlStatement = "com.ecomm.item.mapper.ItemMapper.updateStock";
         boolean r = false;
         try {
             r = executeBatch(items, (sqlSession, entity) -> sqlSession.update(sqlStatement, entity));
