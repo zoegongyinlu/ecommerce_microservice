@@ -1,0 +1,20 @@
+# Logs
+logs/
+*.log
+*.log.*
+
+# Maven target directories
+target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
