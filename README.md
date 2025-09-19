@@ -12,7 +12,7 @@ eMall follows a microservices architecture pattern with the following key compon
 - **Database per Service**: Each service maintains its own database for data isolation
 - **Inter-service Communication**: REST APIs with Feign clients and message queues
 
-## 🚀 Technology Stack
+##  Technology Stack
 
 ### Core Technologies
 - **Java 11** - Programming language
@@ -44,7 +44,7 @@ eMall follows a microservices architecture pattern with the following key compon
 - **Swagger/Knife4j** - API documentation
 - **Maven** - Build and dependency management
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 eMall/
@@ -59,7 +59,7 @@ eMall/
 └── logs/                  # Application logs
 ```
 
-## 🔧 Services Overview
+## Services Overview
 
 ### 1. API Gateway (`mall-gateway`)
 - **Port**: 8080
@@ -123,7 +123,7 @@ eMall/
   - Integration with Order service
   - Payment gateway integration
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 Before running the application, ensure you have the following installed:
 
@@ -135,26 +135,31 @@ Before running the application, ensure you have the following installed:
 - **Elasticsearch 7.12.1**
 - **Docker** (for containerized services)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd ecommerce_microservice
+cd eMall
 ```
 
 ### 2. Start Infrastructure Services
 
 #### Using Docker (Recommended)
-```bash
-# Start Nacos
-docker run -d --name nacos --network hm-net --env-file /path/to/nacoscustom.env \
-  -p 8848:8848 -p 9848:9848 -p 9849:9849 --restart=always nacos/nacos-server:v2.1.0-slim
 
-# Start Seata (for distributed transactions)
+**Deploy Nacos on container:**
+```bash
+docker run -d --name nacos --network mall-net --env-file /path/to/nacoscustom.env \
+  -p 8848:8848 -p 9848:9848 -p 9849:9849 --restart=always nacos/nacos-server:v2.1.0-slim
+```
+
+**Deploy Seata (Distributed Transaction Management):**
+```bash
+docker stop seata
+docker rm seata
 docker run --platform linux/arm64/v8 --name seata -p 8099:8099 -p 7099:7099 \
   -e SEATA_IP=127.0.0.1 -v /path/to/seata:/seata-server/resources \
-  --privileged=true --network hm-net -d seataio/seata-server:1.6.0
+  --privileged=true --network mall-net -d seataio/seata-server:1.6.0
 ```
 
 #### Manual Setup
@@ -214,7 +219,7 @@ mvn spring-boot:run
 - **Nacos Console**: http://localhost:8848/nacos (nacos/nacos)
 - **Service Health**: Check individual service endpoints
 
-## 📚 API Documentation
+##  API Documentation
 
 Each service provides Swagger/Knife4j documentation:
 
@@ -224,7 +229,7 @@ Each service provides Swagger/Knife4j documentation:
 - **Order Service**: http://localhost:8086/doc.html
 - **Payment Service**: http://localhost:8087/doc.html
 
-## 🔄 Application Flow
+## Application Flow
 
 ### Authentication Flow
 1. User sends login credentials to API Gateway
@@ -240,7 +245,7 @@ Each service provides Swagger/Knife4j documentation:
 4. **Payment**: Payment Service handles payment processing
 5. **Confirmation**: Order status updated and confirmed
 
-## 🗄️ Database Schema
+## Database Schema
 
 Each service maintains its own database:
 
@@ -250,7 +255,7 @@ Each service maintains its own database:
 - **mall-trade**: Orders, order items, order status
 - **mall-pay**: Payment records, payment status
 
-## 🔧 Configuration Management
+## Configuration Management
 
 The application uses Nacos for centralized configuration management:
 
@@ -259,14 +264,7 @@ The application uses Nacos for centralized configuration management:
 - Dynamic configuration updates
 - Environment-specific settings
 
-## 🚦 Monitoring & Logging
-
-- **Logs**: Centralized logging in `logs/` directory
-- **Health Checks**: Spring Boot Actuator endpoints
-- **Metrics**: Application metrics and monitoring
-- **Tracing**: Distributed tracing capabilities
-
-## 🧪 Testing
+## Testing
 
 Run tests for individual services:
 
@@ -299,11 +297,7 @@ docker-compose up -d
 4. Add tests for new functionality
 5. Submit a pull request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
