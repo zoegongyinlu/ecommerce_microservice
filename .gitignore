@@ -87,3 +87,5 @@ nacos/logs/
 # Seata data
 seata/data/
 seata/logs/
+eMall/logs/
+nacos/
