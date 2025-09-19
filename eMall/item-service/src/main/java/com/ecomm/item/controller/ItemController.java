@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.*;
  * The controller integrates with the ItemService for business logic implementation
  * and supports both individual and batch operations for product management.
  * 
- * @author eMall Team
+ * @author Yinlu Gong   
  * @version 1.0.0
  * @since 2024
  */
