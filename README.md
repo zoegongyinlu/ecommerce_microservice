@@ -2,7 +2,7 @@
 
 A comprehensive e-commerce platform built with Spring Cloud microservices architecture, featuring user management, product catalog, shopping cart, order processing, and payment services.
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 eMall follows a microservices architecture pattern with the following key components:
 
@@ -277,7 +277,7 @@ mvn test
 mvn test
 ```
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 The application supports Docker deployment:
 
@@ -288,14 +288,6 @@ mvn clean package docker:build
 # Run with Docker Compose
 docker-compose up -d
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Submit a pull request
 
 ## Troubleshooting
 
@@ -318,14 +310,8 @@ docker-compose up -d
    - Verify JWT secret configuration
    - Check token expiration settings
 
-### Getting Help
 
-- Check the logs in the `logs/` directory
-- Review service health endpoints
-- Consult the API documentation
-- Check Nacos console for service status
-
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Frontend application integration
 - [ ] Advanced search capabilities
