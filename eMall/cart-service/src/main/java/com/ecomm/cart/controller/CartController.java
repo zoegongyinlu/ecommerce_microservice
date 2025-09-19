@@ -14,6 +14,24 @@ import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Cart Controller
+ * 
+ * REST controller for handling shopping cart operations in the eMall platform.
+ * This controller provides endpoints for:
+ * - Adding items to shopping cart
+ * - Updating cart item quantities
+ * - Removing items from cart
+ * - Retrieving user's cart contents
+ * - Batch operations for cart management
+ * 
+ * The controller integrates with the CartService for business logic implementation
+ * and handles user-specific cart operations through authentication headers.
+ * 
+ * @author eMall Team
+ * @version 1.0.0
+ * @since 2024
+ */
 @Api(tags = "Shopping Cart API")
 @RestController
 @RequestMapping("/carts")

@@ -20,6 +20,25 @@ import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.ServerWebExchange.Builder;
 import reactor.core.publisher.Mono;
 
+/**
+ * Authentication Global Filter
+ * 
+ * Global filter for the API Gateway that handles JWT token validation and authentication.
+ * This filter is responsible for:
+ * - Intercepting all incoming requests to the gateway
+ * - Validating JWT tokens from the Authorization header
+ * - Excluding certain paths from authentication (login, public endpoints)
+ * - Extracting user information from valid tokens
+ * - Passing user context to downstream services
+ * - Returning 401 Unauthorized for invalid or missing tokens
+ * 
+ * The filter uses AntPathMatcher for flexible path matching and integrates with
+ * JwtTool for token validation and user information extraction.
+ * 
+ * @author eMall Team
+ * @version 1.0.0
+ * @since 2024
+ */
 @Component
 @RequiredArgsConstructor
 public class AuthGlobalFilter implements GlobalFilter, Ordered {

@@ -16,6 +16,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * User Controller
+ * 
+ * REST controller for handling user-related operations in the eMall platform.
+ * This controller provides endpoints for:
+ * - User authentication and login
+ * - User balance management and deduction
+ * 
+ * All endpoints are secured and require proper authentication.
+ * The controller integrates with the UserService for business logic implementation.
+ * 
+ * @author eMall Team
+ * @version 1.0.0
+ * @since 2024
+ */
 @Api(tags = "User API")
 @RestController
 @RequestMapping("/users")

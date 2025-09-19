@@ -68,14 +68,14 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         // 1.6.将Order写入数据库order表中
         save(order);
 
-        // 2.保存订单详情
+        // 2.save the order details
         List<OrderDetail> details = buildDetails(order.getId(), items, itemNumMap);
         detailService.saveBatch(details);
 
-        // 3.清理购物车商品
+        // 3.clear the cart
         cartClient.deleteCartItemByIds(itemIds);
 
-        // 4.扣减库存
+        // 4.deduct stock
         try {
             itemClient.deductStock(detailDTOS);
         } catch (Exception e) {

@@ -19,6 +19,24 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+/**
+ * User Service Implementation
+ * 
+ * Implementation of the IUserService interface providing core user management functionality.
+ * This service handles:
+ * - User authentication and login validation
+ * - JWT token generation and management
+ * - User balance deduction for payments
+ * - User account status validation
+ * - Password encryption and verification
+ * 
+ * The service extends MyBatis Plus ServiceImpl for basic CRUD operations and implements
+ * custom business logic for user authentication and financial operations.
+ * 
+ * @author eMall Team
+ * @version 1.0.0
+ * @since 2024
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor

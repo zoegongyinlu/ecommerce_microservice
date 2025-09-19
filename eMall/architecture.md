@@ -81,9 +81,9 @@ The eMall application is built using a microservices architecture, with each ser
 
 ## Database Structure
 Each service has its own dedicated database:
-- User Service: hm-user
-- Item Service: hm-item
-- Cart Service: hm-cart
-- Order Service: hm-trade
-- Payment Service: hm-pay
+- User Service: mall-user
+- Item Service: mall-item
+- Cart Service: mall-cart
+- Order Service: mall-trade
+- Payment Service: mall-pay
 

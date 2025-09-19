@@ -17,6 +17,24 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Item Controller
+ * 
+ * REST controller for handling product/item-related operations in the eMall platform.
+ * This controller provides endpoints for:
+ * - Product catalog management (CRUD operations)
+ * - Product search and filtering
+ * - Inventory management and stock deduction
+ * - Product status management
+ * - Paginated product queries
+ * 
+ * The controller integrates with the ItemService for business logic implementation
+ * and supports both individual and batch operations for product management.
+ * 
+ * @author eMall Team
+ * @version 1.0.0
+ * @since 2024
+ */
 @Api(tags = "Item Management API")
 @RestController
 @RequestMapping("/items")

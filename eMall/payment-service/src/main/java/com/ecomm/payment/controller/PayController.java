@@ -21,6 +21,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Payment Controller
+ * 
+ * REST controller for handling payment-related operations in the eMall platform.
+ * This controller provides endpoints for:
+ * - Payment order creation and management
+ * - Payment processing and validation
+ * - Payment status tracking and updates
+ * - Payment method support (currently balance payment)
+ * - Payment order retrieval and history
+ * 
+ * The controller integrates with the PayOrderService for business logic implementation
+ * and handles secure payment processing workflows with proper validation.
+ * 
+ * @author eMall Team
+ * @version 1.0.0
+ * @since 2024
+ */
 @Api(tags = "Payment Related APIs")
 @RestController
 @RequestMapping("pay-orders")

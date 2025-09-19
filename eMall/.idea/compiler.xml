@@ -7,33 +7,93 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mall-service" />
-        <module name="cart-service" />
-        <module name="mall-feign" />
-        <module name="payment-service" />
-        <module name="item-service" />
-        <module name="user-service" />
-        <module name="order-service" />
-        <module name="mall-common" />
-        <module name="mall-gateway" />
+        <module name="item-service (2)" />
+        <module name="mall-common (1)" />
+        <module name="eureka-server (1)" />
+        <module name="mall-feign (1)" />
+        <module name="mall-gateway (2)" />
+        <module name="user-service (1)" />
+        <module name="payment-service (1)" />
+        <module name="order-service (2)" />
+        <module name="cart-service (3)" />
+        <module name="mall-service (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cart-service" target="11" />
+      <module name="cart-service (1)" target="1.5" />
+      <module name="cart-service (1) (com.ecomm)" target="11" />
+      <module name="cart-service (10)" target="11" />
+      <module name="cart-service (11)" target="1.5" />
+      <module name="cart-service (12)" target="1.5" />
+      <module name="cart-service (13)" target="1.5" />
+      <module name="cart-service (14)" target="1.5" />
+      <module name="cart-service (15)" target="1.5" />
+      <module name="cart-service (2)" target="1.5" />
+      <module name="cart-service (2) (com.ecomm)" target="11" />
+      <module name="cart-service (3) (com.ecomm)" target="11" />
+      <module name="cart-service (4)" target="1.5" />
+      <module name="cart-service (4) (com.ecomm)" target="11" />
+      <module name="cart-service (5)" target="1.5" />
+      <module name="cart-service (6)" target="11" />
+      <module name="cart-service (6) (com.ecomm)" target="11" />
+      <module name="cart-service (7)" target="1.5" />
+      <module name="cart-service (7) (com.ecomm)" target="11" />
+      <module name="cart-service (8)" target="1.5" />
+      <module name="cart-service (8) (com.ecomm)" target="11" />
+      <module name="cart-service (9)" target="1.5" />
+      <module name="cart-service (9) (com.ecomm)" target="11" />
+      <module name="eMall" target="11" />
+      <module name="eMall (1)" target="1.5" />
+      <module name="eMall (1) (com.ecomm)" target="11" />
+      <module name="eMall (2)" target="11" />
+      <module name="eMall (2) (com.ecomm)" target="11" />
+      <module name="eMall (3)" target="11" />
+      <module name="eMall (3) (com.ecomm)" target="11" />
+      <module name="eureka-server" target="11" />
+      <module name="eureka-server (2)" target="1.8" />
+      <module name="item-service" target="11" />
+      <module name="item-service (1)" target="11" />
+      <module name="mall-common" target="11" />
+      <module name="mall-common (2)" target="11" />
+      <module name="mall-feign" target="11" />
+      <module name="mall-feign (2)" target="11" />
+      <module name="mall-gateway" target="11" />
+      <module name="mall-gateway (1)" target="11" />
+      <module name="mall-service" target="11" />
+      <module name="mall-service (1)" target="11" />
+      <module name="order-service" target="11" />
+      <module name="order-service (1)" target="11" />
+      <module name="payment-service" target="11" />
+      <module name="payment-service (2)" target="11" />
       <module name="trade-service" target="11" />
+      <module name="user-service" target="11" />
+      <module name="user-service (2)" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="cart-service" options="-parameters" />
-      <module name="item-service" options="-parameters" />
-      <module name="mall-common" options="-parameters" />
-      <module name="mall-feign" options="-parameters" />
-      <module name="mall-gateway" options="-parameters" />
-      <module name="mall-service" options="-parameters" />
-      <module name="order-service" options="-parameters" />
-      <module name="payment-service" options="-parameters" />
+      <module name="cart-service" options="" />
+      <module name="cart-service (3)" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="eureka-server (1)" options="-parameters" />
+      <module name="item-service" options="" />
+      <module name="item-service (2)" options="-parameters" />
+      <module name="mall-common" options="" />
+      <module name="mall-common (1)" options="-parameters" />
+      <module name="mall-feign" options="" />
+      <module name="mall-feign (1)" options="-parameters" />
+      <module name="mall-gateway" options="" />
+      <module name="mall-gateway (2)" options="-parameters" />
+      <module name="mall-service" options="" />
+      <module name="mall-service (2)" options="-parameters" />
+      <module name="order-service" options="" />
+      <module name="order-service (2)" options="-parameters" />
+      <module name="payment-service" options="" />
+      <module name="payment-service (1)" options="-parameters" />
       <module name="trade-service" options="-parameters" />
-      <module name="user-service" options="-parameters" />
+      <module name="user-service" options="" />
+      <module name="user-service (1)" options="-parameters" />
     </option>
   </component>
 </project>

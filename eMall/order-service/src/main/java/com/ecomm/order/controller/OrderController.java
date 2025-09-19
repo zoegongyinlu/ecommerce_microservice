@@ -14,6 +14,23 @@ import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Order Controller
+ * 
+ * REST controller for handling order-related operations in the eMall platform.
+ * This controller provides endpoints for:
+ * - Order creation and management
+ * - Order retrieval and status tracking
+ * - Order payment status updates
+ * - Order history and details
+ * 
+ * The controller integrates with the OrderService for business logic implementation
+ * and handles complex order processing workflows including payment integration.
+ * 
+ * @author eMall Team
+ * @version 1.0.0
+ * @since 2024
+ */
 @Api(tags = "Order Management API")
 @RestController
 @RequestMapping("/orders")

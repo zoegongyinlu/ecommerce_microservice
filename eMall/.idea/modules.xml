@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cart-service/cart-service.iml" filepath="$PROJECT_DIR$/cart-service/cart-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/eMall.iml" filepath="$PROJECT_DIR$/.idea/eMall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/item_service/item-service.iml" filepath="$PROJECT_DIR$/item_service/item-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-common/mall-common.iml" filepath="$PROJECT_DIR$/mall-common/mall-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-feign/mall-feign.iml" filepath="$PROJECT_DIR$/mall-feign/mall-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-gateway.iml" filepath="$PROJECT_DIR$/mall-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-service/mall-service.iml" filepath="$PROJECT_DIR$/mall-service/mall-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trade-service/order-service.iml" filepath="$PROJECT_DIR$/trade-service/order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/payment-service.iml" filepath="$PROJECT_DIR$/payment-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service.iml" filepath="$PROJECT_DIR$/user-service.iml" />
+    </modules>
+  </component>
+</project>
