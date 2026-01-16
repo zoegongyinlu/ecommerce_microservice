@@ -14,35 +14,43 @@ eMall follows a microservices architecture pattern with the following key compon
 
 ##  Technology Stack
 
-### Core Technologies
-- **Java 11** - Programming language
-- **Spring Boot 2.7.12** - Application framework
-- **Spring Cloud 2021.0.3** - Microservices framework
-- **Spring Cloud Alibaba 2021.0.4.0** - Alibaba cloud components
+####  Core Technologies
+![Java](https://img.shields.io/badge/Java_11-007396?style=flat-square&logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot_2.7.12-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Cloud](https://img.shields.io/badge/Spring_Cloud_2021.0.3-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Spring Cloud Alibaba](https://img.shields.io/badge/Spring_Cloud_Alibaba_2021.0.4.0-6DB33F?style=flat-square)
 
-### Infrastructure & Tools
-- **Nacos** - Service discovery and configuration management
-- **Spring Cloud Gateway** - API Gateway
-- **Seata** - Distributed transaction management
-- **RabbitMQ** - Message broker for asynchronous communication
-- **Redis** - Caching and session storage
-- **Elasticsearch** - Product search functionality
+---
 
-### Database & ORM
-- **MySQL 8.0.23** - Primary database
-- **MyBatis Plus 3.4.2** - ORM framework
-- **HikariCP** - Connection pooling
+####  Infrastructure & Tools
+![Nacos](https://img.shields.io/badge/Nacos-0E8A16?style=flat-square)
+![Spring Cloud Gateway](https://img.shields.io/badge/Spring_Cloud_Gateway-6DB33F?style=flat-square)
+![Seata](https://img.shields.io/badge/Seata-EE9D28?style=flat-square)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 
-### Security & Validation
-- **Spring Security** - Authentication and authorization
-- **JWT** - Token-based authentication
-- **Hibernate Validator** - Input validation
+---
 
-### Development Tools
-- **Lombok** - Code generation
-- **Hutool** - Java utility library
-- **Swagger/Knife4j** - API documentation
-- **Maven** - Build and dependency management
+####  Database & ORM
+![MySQL](https://img.shields.io/badge/MySQL_8.0.23-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![MyBatis Plus](https://img.shields.io/badge/MyBatis_Plus_3.4.2-000000?style=flat-square)
+![HikariCP](https://img.shields.io/badge/HikariCP-1E90FF?style=flat-square)
+
+---
+
+####  Security & Validation
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
+![Hibernate Validator](https://img.shields.io/badge/Hibernate_Validator-59666C?style=flat-square)
+
+---
+
+####  Development Tools
+![Lombok](https://img.shields.io/badge/Lombok-DC382D?style=flat-square)
+![Hutool](https://img.shields.io/badge/Hutool-4A90E2?style=flat-square)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black)
+![Knife4j](https://img.shields.io/badge/Knife4j-00897B?style=flat-square)
+![Maven](https://img.shields.io/badge/Maven-1565C0?style=flat-square&logo=apachemaven&logoColor=white)
 
 ## Project Structure
 
@@ -309,17 +317,6 @@ docker-compose up -d
 4. **JWT Token Issues**
    - Verify JWT secret configuration
    - Check token expiration settings
-
-
-## Future Enhancements
-
-- [ ] Frontend application integration
-- [ ] Advanced search capabilities
-- [ ] Recommendation engine
-- [ ] Real-time notifications
-- [ ] Advanced monitoring and alerting
-- [ ] CI/CD pipeline setup
-- [ ] Kubernetes deployment support
 
 ---
 
