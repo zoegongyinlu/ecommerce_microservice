@@ -1,0 +1,46 @@
+.main-layout {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-right: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header .ant-menu {
+  flex: 1;
+  border-bottom: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.content {
+  background: #f0f2f5;
+  min-height: calc(100vh - 134px);
+}
+
+.footer {
+  text-align: center;
+  background: #001529;
+  color: white;
+}
